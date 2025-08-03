@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HandsMen Threads - Elevating the Art of Sophistication in Men's Fashion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <h1>HandsMen Threads</h1>
+                        <span class="tagline">Sophistication Redefined</span>
+                    </div>
+                    
+                    <div class="nav-links">
+                        <a href="#" class="nav-link active" data-page="home">Home</a>
+                        <a href="#" class="nav-link" data-page="catalog">Catalog</a>
+                        <a href="#" class="nav-link" data-page="about">About</a>
+                    </div>
+                    
+                    <div class="nav-actions">
+                        <div class="search-container">
+                            <input type="text" class="search-input" placeholder="Search products...">
+                            <button class="search-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <path d="m21 21-4.35-4.35"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <button class="nav-icon" data-page="account">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </button>
+                        <button class="nav-icon cart-icon" data-page="cart">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                            <span class="cart-count">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page -->
+        <div id="home-page" class="page active">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Elevating the Art of Sophistication</h1>
+                        <p class="hero-subtitle">Curating the finest in men's fashion with attention to detail, quality craftsmanship, and timeless style.</p>
+                        <button class="btn btn--primary btn--lg hero-cta" data-page="catalog">Explore Collection</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Products -->
+            <section class="featured-products">
+                <div class="container">
+                    <h2 class="section-title">Featured Collection</h2>
+                    <div class="products-grid" id="featured-products-grid">
+                        <!-- Featured products will be loaded here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Categories -->
+            <section class="categories">
+                <div class="container">
+                    <h2 class="section-title">Shop by Category</h2>
+                    <div class="categories-grid" id="categories-grid">
+                        <!-- Categories will be loaded here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Brand Story -->
+            <section class="brand-story">
+                <div class="container">
+                    <div class="brand-story-content">
+                        <h2>Our Story</h2>
+                        <p>HandsMen Threads represents the pinnacle of sophisticated men's fashion. We believe that every gentleman deserves clothing that not only fits perfectly but also reflects his personal style and confidence.</p>
+                        <p>Our carefully curated collection features premium materials, expert craftsmanship, and timeless designs that transcend seasonal trends.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Catalog Page -->
+        <div id="catalog-page" class="page">
+            <div class="container">
+                <div class="catalog-header">
+                    <h1>Men's Fashion Collection</h1>
+                    <div class="catalog-controls">
+                        <div class="sort-controls">
+                            <select class="form-control" id="sort-select">
+                                <option value="name">Sort by Name</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="featured">Featured First</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="catalog-content">
+                    <aside class="filters-sidebar">
+                        <h3>Filters</h3>
+                        
+                        <div class="filter-group">
+                            <h4>Categories</h4>
+                            <div id="category-filters">
+                                <!-- Category filters will be loaded here -->
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Price Range</h4>
+                            <div class="price-range">
+                                <input type="range" id="price-range" min="0" max="1000" value="1000" class="form-control">
+                                <div class="price-display">Up to $<span id="price-value">1000</span></div>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Colors</h4>
+                            <div id="color-filters">
+                                <!-- Color filters will be loaded here -->
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn--secondary btn--full-width" id="clear-filters">Clear All Filters</button>
+                    </aside>
+                    
+                    <div class="products-section">
+                        <div class="products-grid" id="catalog-products-grid">
+                            <!-- Products will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Detail Page -->
+        <div id="product-detail-page" class="page">
+            <div class="container">
+                <div class="product-detail" id="product-detail-content">
+                    <!-- Product detail will be loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Page -->
+        <div id="cart-page" class="page">
+            <div class="container">
+                <h1>Shopping Cart</h1>
+                <div class="cart-content">
+                    <div class="cart-items" id="cart-items">
+                        <!-- Cart items will be loaded here -->
+                    </div>
+                    <div class="cart-summary">
+                        <div class="card">
+                            <div class="card__body">
+                                <h3>Order Summary</h3>
+                                <div class="summary-line">
+                                    <span>Subtotal:</span>
+                                    <span id="cart-subtotal">$0.00</span>
+                                </div>
+                                <div class="summary-line">
+                                    <span>Shipping:</span>
+                                    <span>$15.00</span>
+                                </div>
+                                <div class="summary-line total">
+                                    <span>Total:</span>
+                                    <span id="cart-total">$15.00</span>
+                                </div>
+                                <button class="btn btn--primary btn--full-width" id="checkout-btn">Proceed to Checkout</button>
+                                <button class="btn btn--outline btn--full-width" data-page="catalog">Continue Shopping</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Account Page -->
+        <div id="account-page" class="page">
+            <div class="container">
+                <h1>My Account</h1>
+                <div class="account-content">
+                    <div class="account-sidebar">
+                        <nav class="account-nav">
+                            <a href="#" class="account-nav-link active" data-section="profile">Profile</a>
+                            <a href="#" class="account-nav-link" data-section="orders">Order History</a>
+                            <a href="#" class="account-nav-link" data-section="wishlist">Wishlist</a>
+                            <a href="#" class="account-nav-link" data-section="settings">Settings</a>
+                        </nav>
+                    </div>
+                    <div class="account-main">
+                        <div id="account-content">
+                            <!-- Account content will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checkout Page -->
+        <div id="checkout-page" class="page">
+            <div class="container">
+                <h1>Checkout</h1>
+                <div class="checkout-content">
+                    <div class="checkout-form">
+                        <div class="checkout-section">
+                            <h3>Shipping Information</h3>
+                            <form id="checkout-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label" for="firstName">First Name</label>
+                                        <input type="text" class="form-control" id="firstName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="lastName">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="address">Address</label>
+                                    <input type="text" class="form-control" id="address" required>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label" for="city">City</label>
+                                        <input type="text" class="form-control" id="city" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="zipCode">ZIP Code</label>
+                                        <input type="text" class="form-control" id="zipCode" required>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="checkout-section">
+                            <h3>Payment Method</h3>
+                            <div class="payment-methods">
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="card" checked>
+                                    <span>Credit Card</span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="paypal">
+                                    <span>PayPal</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkout-summary">
+                        <div class="card">
+                            <div class="card__body">
+                                <h3>Order Summary</h3>
+                                <div id="checkout-items">
+                                    <!-- Checkout items will be loaded here -->
+                                </div>
+                                <div class="summary-line total">
+                                    <span>Total:</span>
+                                    <span id="checkout-total">$0.00</span>
+                                </div>
+                                <button class="btn btn--primary btn--full-width" id="place-order-btn">Place Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Size Guide Modal -->
+    <div id="size-guide-modal" class="modal hidden">
+        <div class="modal-overlay">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Size Guide</h3>
+                    <button class="modal-close" aria-label="Close modal">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="size-chart">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Size</th>
+                                    <th>Chest (in)</th>
+                                    <th>Waist (in)</th>
+                                    <th>Sleeve (in)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>S</td><td>36-38</td><td>30-32</td><td>32-33</td></tr>
+                                <tr><td>M</td><td>38-40</td><td>32-34</td><td>33-34</td></tr>
+                                <tr><td>L</td><td>40-42</td><td>34-36</td><td>34-35</td></tr>
+                                <tr><td>XL</td><td>42-44</td><td>36-38</td><td>35-36</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>HandsMen Threads</h4>
+                    <p>Elevating the art of sophistication in men's fashion through quality craftsmanship and timeless style.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank">Instagram</a>
+                        <a href="#" target="_blank">Facebook</a>
+                        <a href="#" target="_blank">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HandsMen Threads. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
