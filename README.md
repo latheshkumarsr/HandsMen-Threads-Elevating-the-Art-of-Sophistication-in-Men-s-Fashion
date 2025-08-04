@@ -22,8 +22,7 @@ HandsMen Threads aims to digitalize and elevate the experience of men’s fashio
 - **Agentblazer Framework**
 - **LWC (Lightning Web Components) for UI**
 - **REST APIs**
-- **Heroku (optional deployments)**
-- **PostgreSQL / Salesforce Data Cloud**
+- **Salesforce Data Cloud**
 
 
 ## Usage
